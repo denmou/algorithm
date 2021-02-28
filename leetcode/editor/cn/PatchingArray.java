@@ -36,14 +36,7 @@ public class PatchingArray {
         Scanner scanner = new Scanner(System.in);
         System.out.print("请输入nums数组:");
         String value = scanner.nextLine();
-        int[] nums = {};
-        if (value.trim().length() > 0) {
-            String[] array = value.split("[,|，]");
-            nums = new int[array.length];
-            for (int i = 0; i < array.length; i++) {
-                nums[i] = Integer.parseInt(array[i].trim());
-            }
-        }
+        int[] nums = Util.toIntegerArray(value);
         System.out.print("请输入n值:");
         value = scanner.nextLine();
         int target = Integer.parseInt(value);
